@@ -48,6 +48,7 @@ class ReaderFactory
                 static::applyCsvSettings($import->getCsvSettings());
             }
 
+            $reader->setPreserveNullString(true);
             $reader->setDelimiter(static::$delimiter);
             $reader->setEnclosure(static::$enclosure);
             $reader->setEscapeCharacter(static::$escapeCharacter);
